@@ -67,7 +67,7 @@ nav {
   margin-top: 10px;
    border: 0px;
   border-radius: 5px;
-  width: 630px;
+  width: 635px;
   float:left;
   
 }
@@ -79,7 +79,7 @@ ul {
 	padding-top: 0;
 }
 
-li {
+ul li {
     color: #f0f0f0;
   background: #006241;
     display: block;
@@ -90,11 +90,12 @@ li {
   transition-duration: 0.5s;
 }
   
-li a {
-  color: #f0f0f0
+ul li a {
+  color: #f0f0f0;
+  text-decoration:none;
 }
 
-li:hover {
+ul li:hover, #active {
     background: #babf10;
     cursor: pointer;
 }
@@ -158,11 +159,14 @@ aside {
   width: 270px;
   float: right;
   padding: 20px;
-  margin-top: -43px;
+  margin-top: -61px;
   color: #babf10; 
   border: 0px;
   border-radius: 5px;
 
+}
+.sideimage {
+	width:100%;
 }
 
 footer {
