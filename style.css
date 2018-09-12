@@ -59,7 +59,45 @@ body {
   font-size: 15px;
   
 }
+/* Side nav */
 
+
+aside ul {
+	background-color: #006241;
+  padding: 2px;
+  width: 250px;
+  margin-top: 10px;
+	list-style: none;
+    margin: 0;
+    padding-left: 0;
+	padding-top: 0;
+}
+aside ul li {
+	    color: #f0f0f0;
+  background: #babf10;
+
+    display: block;
+    float: left;
+   width: 250px;
+    position: relative;
+    text-decoration: none;
+  transition-duration: 0.5s;
+}
+aside ul li a {
+	text-decoration: none;
+	color: #006241;
+	padding:20px;
+	display:block;
+	
+}
+aside ul li a:active, aside ul li a:visited {
+	text-decoration: none;
+}
+aside ul li a:hover {
+	color: #babf10;
+	background: #006241;
+	
+}
 /* Navigatie */
 nav {
   background-color: #006241;
@@ -71,7 +109,7 @@ nav {
   float:left;
   
 }
-ul {
+nav ul {
  
     list-style: none;
     margin: 0;
@@ -79,50 +117,77 @@ ul {
 	padding-top: 0;
 }
 
-ul li {
+nav ul li {
     color: #f0f0f0;
   background: #006241;
     display: block;
     float: left;
-    padding: 20px;
+   
     position: relative;
     text-decoration: none;
   transition-duration: 0.5s;
 }
   
-ul li a {
+nav ul li a {
   color: #f0f0f0;
+  display:block;
+  padding:15px;
   text-decoration:none;
 }
 
-ul li:hover, #active {
+nav ul li:hover, #active {
     background: #babf10;
     cursor: pointer;
 }
 
-ul li ul {
+nav ul li ul {
     visibility: hidden;
   opacity: 0;
   min-width: 5rem;
   width:100%;
     position: absolute;
   transition: all 0.5s ease;
-  margin-top: 20px;
+ margin-top:5px;
     left: 0;
   display: none;
 }
 
-ul li:hover > ul,
-ul li:focus-within > ul, 
-ul li ul:hover {
+
+nav ul li:hover > ul,
+nav ul li:focus-within > ul, 
+nav ul li ul:hover {
   visibility: visible;
   opacity: 1;
   display: block;
 }
 
-ul li ul li {
+nav ul li ul li {
     clear: both;
   width: 100%;
+}
+/* Tabel */
+table {
+	width:600px;
+}
+td {
+	background: #babf10;
+	padding:20px;
+	width:266px;
+	text-align: center;
+	  transition: all 0.5s ease;
+
+}
+th {
+	background: #006241;
+	width:60px;
+	padding:20px;
+	color: #babf10;
+	empty-cells:hide;
+	
+}
+td:hover {
+	background: #006241;
+	color: #f0f0f0;
 }
 
 /* Website */
