@@ -185,12 +185,22 @@ th {
 	empty-cells:hide;
 	
 }
+
 td:hover {
 	background: #006241;
 	color: #f0f0f0;
 }
 
 /* Website */
+
+def {
+	text-decoration: underline;
+}
+
+.textright {
+	text-align: right;
+}
+
 section {
   background-color: #006241;
   margin-top: 10px;
