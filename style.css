@@ -29,7 +29,7 @@ height: 250px;
 }
 .banneroverlay {
   background: #f0f0f0;
-  opacity: 0.6;
+  opacity: 0.4;
   color: #f0f0f0;
   padding: 10px 20px;
   margin-top:10px;
@@ -39,6 +39,7 @@ height: 250px;
 }
 .logo1 {
 	float:right;
+	
 }
 .logo2 {
 	position: fixed;
@@ -49,9 +50,9 @@ height: 250px;
 body {
   width: 960px;
   margin-left: auto;
-  margin-right: auto; 
-  background: url("background_white.png");
+  margin-right: auto;  
   opacity: 0.85;
+  background: url("background_white.png");
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
@@ -190,15 +191,39 @@ td:hover {
 	background: #006241;
 	color: #f0f0f0;
 }
+/* Formuliertje */
+form#beoordeling {
+	width:600px;
+}
 
+form#beoordeling input {
+	width: 560px;
+	padding: 20px;
+}
+form#beoordeling textarea {
+	width: 590px;
+	padding: 5px;
+}
+
+form#beoordeling p {
+	margin-top:10px;
+}
+form#beoordeling button {
+	padding: 20px;
+	background: #006241;
+	color: #babf10;
+	border: 1px;
+	border-radius:3px;
+	margin-top:10px;
+}
+form#beoordeling button:hover {
+	background: #babf10;
+	color: #006241;
+}
 /* Website */
 
 def {
 	text-decoration: underline;
-}
-
-.textright {
-	text-align: right;
 }
 
 section {
