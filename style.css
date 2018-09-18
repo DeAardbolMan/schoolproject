@@ -104,10 +104,13 @@ nav {
   background-color: #006241;
   padding: 2px;
   margin-top: 10px;
-   border: 0px;
+   border: solid 1px #f0f0f0;
   border-radius: 5px;
   width: 635px;
   float:left;
+  position: sticky;
+  top:10px;
+  
   
 }
 nav ul {
@@ -151,6 +154,7 @@ nav ul li ul {
  margin-top:5px;
     left: 0;
   display: none;
+  
 }
 
 
@@ -220,6 +224,15 @@ form#beoordeling button:hover {
 	background: #babf10;
 	color: #006241;
 }
+/* Afbeelding MySQL */
+section#mysql img {
+	width: 50%;
+}
+section#mysql img:hover {
+	
+	width:100%;
+	
+}
 /* Website */
 
 def {
@@ -256,10 +269,11 @@ main {
 
 aside {
   background-color: #006241;
+  position: relative;
   width: 270px;
   float: right;
   padding: 20px;
-  margin-top: -61px;
+  top: -61px;
   color: #babf10; 
   border: 0px;
   border-radius: 5px;
@@ -278,4 +292,7 @@ footer {
   border-radius: 5px;
   margin-bottom:10px;
   text-align: center;
+}
+.imgopbouw {
+	width: 100%;
 }
