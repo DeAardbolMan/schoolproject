@@ -38,8 +38,16 @@ height: 250px;
   border-radius: 5px;
 }
 .logo1 {
-	float:right;
+	top:20px;
+	right: 20px;
+	z-index: 10;
+	position: absolute;
+	transition: all 0.5s ease-in-out;
+	transform: rotate(-20deg);
 	
+}
+.logo1:hover {
+	transform: rotate(20deg);
 }
 .logo2 {
 	position: fixed;
@@ -61,7 +69,12 @@ body {
   
 }
 /* Side nav */
-
+aside#menutje {
+	position: sticky;
+	top:10px;
+	margin-top:-61px;
+	border: 1px #f0f0f0 solid;
+}
 
 aside ul {
 	background-color: #006241;
@@ -99,6 +112,7 @@ aside ul li a:hover {
 	background: #006241;
 	
 }
+
 /* Navigatie */
 nav {
   background-color: #006241;
@@ -226,11 +240,16 @@ form#beoordeling button:hover {
 }
 /* Afbeelding MySQL */
 section#mysql img {
-	width: 50%;
+	width:100%; 
 }
-section#mysql img:hover {
+section#mysql #img1 {
+	width: 100%;
+	height:460px;
+	background: url("images/mysql/screenshot_5.png");
+}
+section#mysql #img1:hover {
 	
-	width:100%;
+	background: url("images/mysql/screenshot_2.png");
 	
 }
 /* Website */
@@ -279,6 +298,7 @@ aside {
   border-radius: 5px;
 
 }
+
 .sideimage {
 	width:100%;
 }
