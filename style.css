@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=Roboto');
 
 article, aside, footer, header, main, nav, section {
   display: block;
@@ -12,6 +13,8 @@ html, body,
 article, aside, footer, header, main, nav, section {
   padding: 0;
   margin: 0;
+  font-family: 'Roboto', sans-serif;
+
 }
 .banner .banneroverlay h1, .banner .banneroverlay p {
 	color: #f0f0f0;
@@ -168,6 +171,7 @@ nav ul li ul {
  margin-top:5px;
     left: 0;
   display: none;
+  z-index: 100;
   
 }
 
@@ -217,10 +221,17 @@ form#beoordeling {
 form#beoordeling input {
 	width: 560px;
 	padding: 20px;
+	border: 1px solid #babf10;
+}
+form#beoordeling input:active, #beoordeling input:focus, #beoordeling textarea:active, #beoordeling textarea:focus {
+	background:#006241;
+	color: #babf10;
+	border: 1px solid #babf10;
 }
 form#beoordeling textarea {
 	width: 590px;
 	padding: 5px;
+	border: 1px solid #babf10;
 }
 
 form#beoordeling p {
@@ -251,6 +262,83 @@ section#mysql #img1:hover {
 	
 	background: url("images/mysql/screenshot_2.png");
 	
+}
+/* Animatie */
+.boot {
+	background: url("images/animatie/boot.png");
+	height: 90px;
+	width:190px;
+	position:relative;
+	top:0px;
+	z-index:6;
+	transition: all 5.5s ease-in-out;
+
+}
+.boot:hover {
+	margin-left: 400px;
+	z-index: 6;
+}
+.water {
+	background: url("images/animatie/wave.png");
+	height: 150px;
+	width: 600px;
+	position:absolute;
+	bottom:54px;
+	animation: slide 25.0s linear infinite;
+	z-index:5;
+}
+@-webkit-keyframes slide 
+	{
+			from{background-position:bottom;}
+			to
+			{background-position:-1200px bottom;}}
+			
+.animatie {
+	margin-top:10px;
+	height:100px;
+	
+}
+/* Gallerij */
+.gallerij img{
+	width:190px;
+	z-index: 1;
+	height:190px;
+	opacity: 0.5;
+	position:relative;
+	border:3px #006241 inset;
+	transition: all 0.5s ease-in-out;
+	transform:rotate(-3deg);
+	
+}
+.gallerij img:hover {
+	z-index: 10;
+	position:relative;
+	opacity: 1.0;
+	transform: rotate(360deg);
+	border:3px #babf10 outset;
+}
+.gallerij .rij2 img{
+	width:190px;
+	z-index: 1;
+	height:190px;
+	opacity: 0.5;
+	position:relative;
+	border:3px #006241 inset;
+	transition: all 0.5s ease-in-out;
+	transform:rotate(3deg);
+	
+}
+.gallerij .rij2 img:hover {
+	z-index: 10;
+	position:relative;
+	opacity: 1.0;
+	transform: rotate(-360deg);
+	border:3px #babf10 outset;
+}
+/* Software */
+.software img {
+	width:75px;
+	height:75px;
 }
 /* Website */
 
@@ -288,13 +376,14 @@ main {
 
 aside {
   background-color: #006241;
-  position: relative;
+  position: sticky;
   width: 270px;
   float: right;
   padding: 20px;
-  top: -61px;
+  margin-top: -61px;
+  top:10px;
   color: #babf10; 
-  border: 0px;
+  border: 1px solid #f0f0f0;
   border-radius: 5px;
 
 }
