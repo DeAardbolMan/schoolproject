@@ -17,6 +17,11 @@
       document.createElement("section");
     </script>
     <![endif]-->
+	<script>
+	function myRating(val) {
+    document.getElementById("Rating").innerHTML = "Cijfer: "+val; 
+}
+</script>
   </head>
   <body>
   <a href="https://techniekcollegerotterdam.nl">
@@ -74,27 +79,50 @@ In mijn vrije tijd speel ik graag games zoals <def title="Grand Theft Auto V">GT
         <article>
        
           <p>Het is de bedoeling dat hier een verhaaltje komt over dit formulier.</p>
-          <form id="beoordeling">
-			<label for="naam"><p><b>Naam</b></p></label>
-			<input type="text" id="naam" placeholder="Borre van den Engel">
+          <form id="beoordeling" action="bedankt.html" method="get">
+		<fieldset>
+		<legend><b>Jouw gegevens</b></legend>
+			<label for="naam"><p>Naam *</p></label>
+			<input type="text" id="naam" placeholder="Borre van den Engel"  required>
+			
+			<label for="email"><p>Email</p></label>
+			<input type="email" id="email" placeholder="Email@provider.com">
+			
+			<label for="leeftijd"><p>Leeftijd</p></label>
+			<input type="number" value="22" min="1" max="110">
+			 <label for="woonplaats"><p>Woonplaats *</p></label>
+    <select required>
+      <option>Spijkenisse</option>
+      <option>Hellevoetsluis</option>
+      <option>Rotterdam</option>
+      <option>Hoogvliet</option>
+      <option>Overig</option>
+    </select>
+	<label for="postcode"><p>Postcode</p></label>
+	<input type="text" id="postcode" pattern="[0-9]{4}\s[A-Z]{2}" placeholder="3202 VW" title="Een postcode bestaat uit 4 cijfers, opgevold door een spatie en 2 hoofdletters.">
+		</fieldset>
+		<fieldset>
+		<legend><b>Geboortedatum</b></legend>
+			
+			<input type="date" id="geboortedatum">
+		</fieldset>
+		<fieldset>
+		<legend><b>Beoordeling</b></legend>
 		
-			<label for="rating"><p><b>Beoordeling</b></p>
-			</label>
-		  <input id="rating" type="range" min="1" max="5" step="1" list="rating-list">
-		  <datalist id="rating-list">
-			<option value="0" label="0">
-			<option value="1" label="1">
-			<option value="2" label="2">
-			<option value="3" label="3">
-			<option value="4" label="4">
-			<option value="5" label="5">
-		  </datalist>
+		<label for="rating"><p id="Rating">Cijfer 1 tot 5</p></label>
+		<input id="rating" type="range" min="1" max="5" step="1" list="rating-list"  oninput="myRating(this.value)"required>
+		
 		  
-		  <label for="toevoeging"><p><b>Toevoeging</b></p></label>
+		  <label for="toevoeging"><p>Toevoeging</p></label>
 		  <textarea id="toevoeging" name="toevoeging" rows="5">
 		  </textarea>
-		  <p>Druk op de knop om het formulier in te leveren</p>
+		  </fieldset>
+		  <fieldset>
+		  <legend><b>Alles ingevuld?</b></legend>
+		
 		  <button value="Verzenden">Verzenden</button>
+		  </fieldset>
+		  
 		  
 		  
 		  </form>

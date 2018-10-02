@@ -127,6 +127,7 @@ nav {
   float:left;
   position: sticky;
   top:10px;
+  z-index:100;
   
   
 }
@@ -214,23 +215,25 @@ td:hover {
 	color: #f0f0f0;
 }
 /* Formuliertje */
-form#beoordeling {
-	width:600px;
-}
 
-form#beoordeling input {
-	width: 560px;
+form#beoordeling input{
+	width: 530px;
 	padding: 20px;
 	border: 1px solid #babf10;
 }
-form#beoordeling input:active, #beoordeling input:focus, #beoordeling textarea:active, #beoordeling textarea:focus {
+form#beoordeling input:active, #beoordeling input:focus, #beoordeling textarea:active, #beoordeling textarea:focus, #beoordeling select:active, #beoordeling select:focus {
 	background:#006241;
 	color: #babf10;
 	border: 1px solid #babf10;
 }
 form#beoordeling textarea {
-	width: 590px;
+	width: 560px;
 	padding: 5px;
+	border: 1px solid #babf10;
+}
+form#beoordeling select {
+	width:570px;
+	padding:20px;
 	border: 1px solid #babf10;
 }
 
@@ -249,6 +252,13 @@ form#beoordeling button:hover {
 	background: #babf10;
 	color: #006241;
 }
+
+form#beoordeling fieldset {
+	border: 2px #babf10 solid;
+	margin:10px auto;
+	width:570px;
+}
+
 /* Afbeelding MySQL */
 section#mysql img {
 	width:100%; 
